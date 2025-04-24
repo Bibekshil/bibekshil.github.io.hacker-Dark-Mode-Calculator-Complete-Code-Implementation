@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
 <head>
     <!-- SEO Meta Tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Hacker-themed dark mode calculator with full functionality. Includes HTML, CSS, and JavaScript code for developers.">
-    <meta name="keywords" content="hacker calculator, dark mode calculator, javascript calculator, code example, web development">
+    <meta name="keywords" content="hacker calculator, dark mode calculator, javascript calculator, code example, web development, calculator source code">
     <meta name="author" content="CodeMaster">
     
     <!-- Open Graph / Social Media Meta -->
@@ -21,13 +20,14 @@
     <meta name="twitter:title" content="Hacker Dark Mode Calculator">
     <meta name="twitter:description" content="Built with HTML, CSS, and JavaScript - fully responsive and hacker-themed!">
     <meta name="twitter:image" content="https://i.imghippo.com/files/PnfN4821DJo.png">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7867993252068161"
-     crossorigin="anonymous"></script>
+    
+    <!-- Google Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7867993252068161" crossorigin="anonymous"></script>
     
     <!-- Favicon -->
     <link rel="icon" href="https://i.imghippo.com/files/PnfN4821DJo.png">
     
-    <title>calculator html css javascript code</title>
+    <title> Calculator  HTML CSS JavaScript Code</title>
     
     <style>
         /* Base Styles */
@@ -63,9 +63,17 @@
             margin-top: 1.5em;
         }
 
-        h1 { font-size: 2.2rem; }
+        h1 { 
+            font-size: 2.2rem; 
+            margin-bottom: 1.5rem;
+        }
         h2 { font-size: 1.8rem; }
         h3 { font-size: 1.4rem; }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #bbb;
+        }
 
         /* Image Showcase Section */
         .showcase {
@@ -104,6 +112,7 @@
             position: relative;
             padding-left: 25px;
             margin-bottom: 12px;
+            color: var(--primary-color);
         }
 
         .feature-list p::before {
@@ -178,10 +187,10 @@
             margin-bottom: 50px;
             background-color: var(--code-bg);
             padding: 25px;
+            overflow: auto;
+            height: 300px;
             border-radius: 10px;
             border: 1px solid var(--border-color);
-            overflow: auto;
-            height: 500px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
@@ -222,6 +231,10 @@
         body.light-mode h3 {
             color: #2c3e50;
             border-bottom-color: #ddd;
+        }
+
+        body.light-mode p {
+            color: #555;
         }
 
         body.light-mode pre {
@@ -269,7 +282,343 @@
             color: #2c3e50;
         }
 
+        /* Modern Link Style */
+        .modern-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--primary-color);
+            margin-top: 15px;
+        }
+
+        .modern-link:hover {
+            background-color: rgba(86, 241, 7, 0.1);
+        }
+
+        .modern-link span:last-child {
+            transition: transform 0.2s;
+        }
+
+        .modern-link:hover span:last-child {
+            transform: translateX(3px);
+        }
+
+        body.light-mode .modern-link {
+            color: #2c3e50;
+            border-color: #2c3e50;
+        }
+
+        body.light-mode .modern-link:hover {
+            background-color: rgba(44, 62, 80, 0.1);
+        }
+
+        /* Ad Container Styles */
+        .ads {
+            background-color: var(--code-bg);
+            border: 1px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+        }
+
+        .ads::before {
+            content: "ADVERTISEMENT";
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 0.7rem;
+            font-family: 'Courier New', monospace;
+            color: var(--primary-color);
+            opacity: 0.6;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .ads::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(86, 241, 7, 0.1) 10px,
+                    rgba(86, 241, 7, 0.1) 20px
+                );
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Fixed Top Ad */
+        .ads.top {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 250px;
+            z-index: 1000;
+            margin: 10px;
+            box-shadow: 0 0 20px rgba(86, 241, 7, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse-border 3s infinite;
+        }
+
+        /* Fixed Bottom Ad */
+        .ads.bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 90px;
+            z-index: 1000;
+            margin: 0;
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            box-shadow: 0 -5px 20px rgba(86, 241, 7, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Content Ad Styles */
+        .ads.html, 
+        .ads.css, 
+        .ads.js {
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 25px auto;
+            box-shadow: 0 5px 20px rgba(86, 241, 7, 0.2);
+            border-left: 3px solid var(--primary-color);
+        }
+
+        /* Button Ad Style */
+        .ads.button {
+            width: 100%;
+            max-width: 728px;
+            height: 90px;
+            margin: 30px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Ad Content Styling */
+        .ad-content {
+            color: var(--primary-color);
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+
+        .ad-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: var(--secondary-color);
+        }
+
+        .ad-content p {
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .ad-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-family: 'Courier New', monospace;
+        }
+
+        .ad-placeholder-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            opacity: 0.5;
+        }
+
+        /* Light Mode Ad Styles */
+        body.light-mode .ads {
+            background-color: var(--light-code);
+            border-color: var(--text-dark);
+        }
+
+        body.light-mode .ads::before {
+            color: var(--text-dark);
+        }
+
+        body.light-mode .ads::after {
+            background: 
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(0, 0, 0, 0.05) 10px,
+                    rgba(0, 0, 0, 0.05) 20px
+                );
+        }
+
+        body.light-mode .ad-content h3 {
+            color: #2c3e50;
+        }
+
+        /* Animation */
+        @keyframes pulse-border {
+            0% { box-shadow: 0 0 0 0 rgba(86, 241, 7, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(86, 241, 7, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(86, 241, 7, 0); }
+        }
+
+        .ads:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px var(--shadow-color);
+        }
+
+        /* ROM Container Styles */
+        .rom {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 40px 0;
+            padding: 20px;
+            background-color: rgba(86, 241, 7, 0.05);
+            border-radius: 10px;
+            border: 1px dashed var(--primary-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rom::before {
+            content: "EXTERNAL LINKS";
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background-color: var(--dark-bg);
+            color: var(--primary-color);
+            font-size: 0.7rem;
+            padding: 0 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ROM Link Styles */
+        .rom a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 12px 24px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--primary-color);
+            background-color: rgba(86, 241, 7, 0.1);
+            position: relative;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+        }
+
+        .rom a::before {
+            content: ">";
+            margin-right: 8px;
+            color: var(--primary-color);
+        }
+
+        .rom a::after {
+            content: "";
+            position: absolute;
+            left: -100%;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, 
+                        transparent, 
+                        rgba(86, 241, 7, 0.2), 
+                        transparent);
+            transition: all 0.5s ease;
+        }
+
+        .rom a:hover {
+            background-color: var(--primary-color);
+            color: var(--dark-bg);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+
+        .rom a:hover::after {
+            left: 100%;
+        }
+
+        .rom a span {
+            transition: transform 0.3s ease;
+        }
+
+        .rom a:hover span:last-child {
+            transform: translateX(5px);
+        }
+
+        /* Light Mode ROM Styles */
+        body.light-mode .rom {
+            background-color: rgba(0, 122, 204, 0.05);
+            border-color: var(--text-dark);
+        }
+
+        body.light-mode .rom::before {
+            background-color: var(--light-bg);
+            color: var(--text-dark);
+        }
+
+        body.light-mode .rom a {
+            color: var(--text-dark);
+            border-color: var(--text-dark);
+            background-color: rgba(0, 0, 0, 0.05);
+        }
+
+        body.light-mode .rom a:hover {
+            background-color: var(--text-dark);
+            color: var(--light-bg);
+        }
+
         /* Responsive Design */
+        @media (max-width: 1024px) {
+            .ads.top {
+                width: 250px;
+                height: 200px;
+            }
+            
+            .ads.html, 
+            .ads.css, 
+            .ads.js {
+                height: 200px;
+            }
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 15px;
@@ -286,6 +635,46 @@
             
             pre {
                 padding: 15px;
+            }
+
+            .ads.top {
+                position: sticky;
+                top: 0;
+                right: auto;
+                width: 100%;
+                height: 80px;
+                margin: 0;
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+                border-top: none;
+            }
+            
+            .ads.bottom {
+                height: 70px;
+            }
+            
+            .ads.html, 
+            .ads.css, 
+            .ads.js {
+                height: 150px;
+            }
+            
+            .ads.button {
+                height: 70px;
+            }
+
+            .rom {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                padding: 25px 15px;
+            }
+            
+            .rom a {
+                width: 100%;
+                justify-content: center;
+                padding: 10px 15px;
             }
         }
 
@@ -307,439 +696,57 @@
                 padding: 8px 15px;
                 font-size: 0.9rem;
             }
+
+            .ads.top {
+                height: 60px;
+            }
+            
+            .ads.bottom {
+                height: 50px;
+            }
+            
+            .ads::before {
+                font-size: 0.6rem;
+                right: 5px;
+            }
+            
+            .ad-content h3 {
+                font-size: 1rem;
+            }
+            
+            .ad-content p {
+                font-size: 0.8rem;
+            }
+
+            .rom {
+                margin: 30px 0;
+                padding: 20px 10px;
+            }
+            
+            .rom a {
+                font-size: 0.9rem;
+                padding: 8px 12px;
+            }
+            
+            .rom::before {
+                font-size: 0.6rem;
+                left: 10px;
+            }
+        
         }
-        .modern-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 16px;
-  border-radius: 6px;
-  transition: background-color 0.2s;
-}
-.modern-link:hover {
-  background-color: #eff6ff;
-}
-.modern-link span:last-child {
-  transition: transform 0.2s;
-}
-.modern-link:hover span:last-child {
-  transform: translateX(3px);
-}
- 
-
-.ads {
-    background-color: var(--code-bg);
-    border: 1px solid var(--primary-color);
-    border-radius: 8px;
-    padding: 15px;
-    margin: 20px 0;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-}
-
-.ads::before {
-    content: "ADVERTISEMENT";
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    font-size: 0.7rem;
-    font-family: 'Courier New', monospace;
-    color: var(--primary-color);
-    opacity: 0.6;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.ads::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    background: 
-        repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 10px,
-            rgba(86, 241, 7, 0.1) 10px,
-            rgba(86, 241, 7, 0.1) 20px
-        );
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    pointer-events: none;
-}
-
-
-.ads.top {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 300px;
-    height: 250px;
-    z-index: 1000;
-    margin: 10px;
-    box-shadow: 0 0 20px rgba(86, 241, 7, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: pulse-border 3s infinite;
-}
-
-
-.ads.bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 90px;
-    z-index: 1000;
-    margin: 0;
-    border-radius: 0;
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-    box-shadow: 0 -5px 20px rgba(86, 241, 7, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.ads.html, 
-.ads.css, 
-.ads.js {
-    height: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 25px auto;
-    box-shadow: 0 5px 20px rgba(86, 241, 7, 0.2);
-    border-left: 3px solid var(--primary-color);
-}
-
-
-.ads.button {
-    width: 100%;
-    max-width: 728px;
-    height: 90px;
-    margin: 30px auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-
-.ad-content {
-    color: var(--primary-color);
-    font-family: 'Courier New', monospace;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-}
-
-.ad-content h3 {
-    margin-bottom: 10px;
-    font-size: 1.2rem;
-    color: var(--secondary-color);
-}
-
-.ad-content p {
-    font-size: 0.9rem;
-    margin-bottom: 15px;
-    opacity: 0.8;
-}
-
-.ad-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-color);
-    font-family: 'Courier New', monospace;
-}
-
-.ad-placeholder-icon {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    opacity: 0.5;
-}
-
-
-body.light-mode .ads {
-    background-color: var(--light-code);
-    border-color: var(--text-dark);
-}
-
-body.light-mode .ads::before {
-    color: var(--text-dark);
-}
-
-body.light-mode .ads::after {
-    background: 
-        repeating-linear-gradient(
-            45deg,
-            transparent,
-            transparent 10px,
-            rgba(0, 0, 0, 0.05) 10px,
-            rgba(0, 0, 0, 0.05) 20px
-        );
-}
-
-body.light-mode .ad-content h3 {
-    color: #2c3e50;
-}
-
-
-
-@keyframes pulse-border {
-    0% { box-shadow: 0 0 0 0 rgba(86, 241, 7, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(86, 241, 7, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(86, 241, 7, 0); }
-}
-
-.ads:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px var(--shadow-color);
-}
-/
-
-@media (max-width: 1024px) {
-    .ads.top {
-        width: 250px;
-        height: 200px;
-    }
-    
-    .ads.html, 
-    .ads.css, 
-    .ads.js {
-        height: 200px;
-    }
-}
-
-@media (max-width: 768px) {
-    .ads.top {
-        position: sticky;
-        top: 0;
-        right: auto;
-        width: 100%;
-        height: 80px;
-        margin: 0;
-        border-radius: 0;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-    }
-    
-    .ads.bottom {
-        height: 70px;
-    }
-    
-    .ads.html, 
-    .ads.css, 
-    .ads.js {
-        height: 150px;
-    }
-    
-    .ads.button {
-        height: 70px;
-    }
-}
-
-
-@media (max-width: 480px) {
-    .ads.top {
-        height: 60px;
-    }
-    
-    .ads.bottom {
-        height: 50px;
-    }
-    
-    .ads::before {
-        font-size: 0.6rem;
-        right: 5px;
-    }
-    
-    .ad-content h3 {
-        font-size: 1rem;
-    }
-    
-    .ad-content p {
-        font-size: 0.8rem;
-    }
-}
-/* ============================================= */
-/* ROM CONTAINER STYLES */
-/* ============================================= */
-
-.rom {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin: 40px 0;
-    padding: 20px;
-    background-color: rgba(86, 241, 7, 0.05);
-    border-radius: 10px;
-    border: 1px dashed var(--primary-color);
-    position: relative;
-    overflow: hidden;
-}
-
-.rom::before {
-    content: "EXTERNAL LINKS";
-    position: absolute;
-    top: -10px;
-    left: 20px;
-    background-color: var(--dark-bg);
-    color: var(--primary-color);
-    font-size: 0.7rem;
-    padding: 0 10px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-/* ============================================= */
-/* ROM LINK STYLES */
-/* ============================================= */
-
-.rom a {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--primary-color);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 12px 24px;
-    border-radius: 6px;
-    transition: all 0.3s ease;
-    border: 1px solid var(--primary-color);
-    background-color: rgba(86, 241, 7, 0.1);
-    position: relative;
-    overflow: hidden;
-    font-family: 'Courier New', monospace;
-}
-
-.rom a::before {
-    content: ">";
-    margin-right: 8px;
-    color: var(--primary-color);
-}
-
-.rom a::after {
-    content: "";
-    position: absolute;
-    left: -100%;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, 
-                transparent, 
-                rgba(86, 241, 7, 0.2), 
-                transparent);
-    transition: all 0.5s ease;
-}
-
-.rom a:hover {
-    background-color: var(--primary-color);
-    color: var(--dark-bg);
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px var(--shadow-color);
-}
-
-.rom a:hover::after {
-    left: 100%;
-}
-
-.rom a span {
-    transition: transform 0.3s ease;
-}
-
-.rom a:hover span:last-child {
-    transform: translateX(5px);
-}
-
-/* ============================================= */
-/* LIGHT MODE STYLES */
-/* ============================================= */
-
-body.light-mode .rom {
-    background-color: rgba(0, 122, 204, 0.05);
-    border-color: var(--text-dark);
-}
-
-body.light-mode .rom::before {
-    background-color: var(--light-bg);
-    color: var(--text-dark);
-}
-
-body.light-mode .rom a {
-    color: var(--text-dark);
-    border-color: var(--text-dark);
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-body.light-mode .rom a:hover {
-    background-color: var(--text-dark);
-    color: var(--light-bg);
-}
-
-/* ============================================= */
-/* RESPONSIVE ADJUSTMENTS */
-/* ============================================= */
-
-@media (max-width: 768px) {
-    .rom {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 25px 15px;
-    }
-    
-    .rom a {
-        width: 100%;
-        justify-content: center;
-        padding: 10px 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .rom {
-        margin: 30px 0;
-        padding: 20px 10px;
-    }
-    
-    .rom a {
-        font-size: 0.9rem;
-        padding: 8px 12px;
-    }
-    
-    .rom::before {
-        font-size: 0.6rem;
-        left: 10px;
-    }
-}
     </style>
 </head>
 <body>
-    <div class="ads top">
+  <div class="ads top">
         <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7867993252068161"
-     data-ad-slot="8833659630"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+             style="display:block"
+             data-ad-client="ca-pub-7867993252068161"
+             data-ad-slot="8833659630"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
     <!-- Image Showcase Section -->
     <div class="showcase">
@@ -765,21 +772,23 @@ body.light-mode .rom a:hover {
     <p>A complete implementation of a hacker-themed calculator with dark/light mode toggle, including all HTML, CSS, and JavaScript code.</p>
     
     <button id="hacker-toggle">Switch to Light Mode</button>
-<div class="ads html">
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7867993252068161"
-     data-ad-slot="7788171279"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
+<!-- HTML Ad -->
+    <div class="ads html">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7867993252068161"
+             data-ad-slot="7788171279"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
     <!-- HTML Code Section -->
     <div class="code-section">
         <h2>HTML Structure</h2>
-        <p>The semantic HTML5 markup for the calculator with proper accessibility attributes and element structure. Includes all calculator buttons and display elements.</p>
+        <p>The semantic HTML5 markup for the calculator with proper accessibility attributes and element structure. Includes all calculator buttons and display elements with ARIA labels for better accessibility.</p>
         <pre><code id="html-code">&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -844,22 +853,23 @@ body.light-mode .rom a:hover {
 &lt;/body&gt;
 &lt;/html&gt;</code><button class="copy-btn" onclick="copyCode('html-code')">Copy</button></pre>
     </div>
-<div class="ads css">
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7867993252068161"
-     data-ad-slot="7788171279"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-</div>
+  <div class="ads css">
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7867993252068161"
+             data-ad-slot="7788171279"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
     <!-- CSS Code Section -->
     <div class="code-section">
         <h2>CSS Styling</h2>
-        <p>Complete CSS for the hacker-themed calculator with dark/light mode variables, responsive design, and interactive elements styling.</p>
-        <pre><code id="css-code">  :root {
+        <p>Complete CSS for the hacker-themed calculator with dark/light mode variables, responsive design, and interactive elements styling. The CSS includes modern features like CSS variables for easy theming and transitions for smooth animations.</p>
+        <pre><code id="css-code"> :root {
             --bg-color: #0f0f0f;
             --text-color: white;
             --calc-bg: black;
@@ -1134,15 +1144,15 @@ body.light-mode .rom a:hover {
     }</code><button class="copy-btn" onclick="copyCode('css-code')">Copy</button></pre>
     </div>
 <div class="ads js">
-    <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7867993252068161"
-     data-ad-slot="7788171279"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+   <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7867993252068161"
+             data-ad-slot="7788171279"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
 </div>
     <!-- JavaScript Code Section -->
     <div class="code-section">
@@ -1331,14 +1341,15 @@ body.light-mode .rom a:hover {
     </div>
     <div class="ads button">
         <ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7867993252068161"
-     data-ad-slot="7788171279"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+             style="display:block"
+             data-ad-client="ca-pub-7867993252068161"
+             data-ad-slot="7788171279"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
+    <p>my name is Bibekshil sharma.</p>
 </body>
 </html>
