@@ -328,9 +328,7 @@
 .modern-link:hover span:last-child {
   transform: translateX(3px);
 }
-/* ============================================= */
-/* AD CONTAINER BASE STYLES */
-/* ============================================= */
+ 
 
 .ads {
     background-color: var(--code-bg);
@@ -377,11 +375,7 @@
     pointer-events: none;
 }
 
-/* ============================================= */
-/* SPECIFIC AD POSITIONS */
-/* ============================================= */
 
-/* Top Banner Ad */
 .ads.top {
     position: fixed;
     top: 0;
@@ -397,7 +391,7 @@
     animation: pulse-border 3s infinite;
 }
 
-/* Bottom Banner Ad */
+
 .ads.bottom {
     position: fixed;
     bottom: 0;
@@ -416,7 +410,7 @@
     justify-content: center;
 }
 
-/* Code Section Ads */
+
 .ads.html, 
 .ads.css, 
 .ads.js {
@@ -429,7 +423,7 @@
     border-left: 3px solid var(--primary-color);
 }
 
-/* Button Ad */
+
 .ads.button {
     width: 100%;
     max-width: 728px;
@@ -440,9 +434,7 @@
     justify-content: center;
 }
 
-/* ============================================= */
-/* AD CONTENT STYLING */
-/* ============================================= */
+
 
 .ad-content {
     color: var(--primary-color);
@@ -481,9 +473,6 @@
     opacity: 0.5;
 }
 
-/* ============================================= */
-/* LIGHT MODE STYLES */
-/* ============================================= */
 
 body.light-mode .ads {
     background-color: var(--light-code);
@@ -509,9 +498,7 @@ body.light-mode .ad-content h3 {
     color: #2c3e50;
 }
 
-/* ============================================= */
-/* ANIMATIONS & EFFECTS */
-/* ============================================= */
+
 
 @keyframes pulse-border {
     0% { box-shadow: 0 0 0 0 rgba(86, 241, 7, 0.4); }
@@ -523,10 +510,7 @@ body.light-mode .ad-content h3 {
     transform: translateY(-3px);
     box-shadow: 0 8px 25px var(--shadow-color);
 }
-
-/* ============================================= */
-/* RESPONSIVE ADJUSTMENTS */
-/* ============================================= */
+/
 
 @media (max-width: 1024px) {
     .ads.top {
@@ -569,6 +553,30 @@ body.light-mode .ad-content h3 {
         height: 70px;
     }
 }
+
+
+@media (max-width: 480px) {
+    .ads.top {
+        height: 60px;
+    }
+    
+    .ads.bottom {
+        height: 50px;
+    }
+    
+    .ads::before {
+        font-size: 0.6rem;
+        right: 5px;
+    }
+    
+    .ad-content h3 {
+        font-size: 1rem;
+    }
+    
+    .ad-content p {
+        font-size: 0.8rem;
+    }
+}
 /* ============================================= */
 /* ROM CONTAINER STYLES */
 /* ============================================= */
@@ -599,7 +607,6 @@ body.light-mode .ad-content h3 {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-
 /* ============================================= */
 /* ROM LINK STYLES */
 /* ============================================= */
@@ -720,33 +727,20 @@ body.light-mode .rom a:hover {
         left: 10px;
     }
 }
-
-@media (max-width: 480px) {
-    .ads.top {
-        height: 60px;
-    }
-    
-    .ads.bottom {
-        height: 50px;
-    }
-    
-    .ads::before {
-        font-size: 0.6rem;
-        right: 5px;
-    }
-    
-    .ad-content h3 {
-        font-size: 1rem;
-    }
-    
-    .ad-content p {
-        font-size: 0.8rem;
-    }
-}
     </style>
 </head>
 <body>
-    <div class="ads top"></div>
+    <div class="ads top">
+        <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7867993252068161"
+     data-ad-slot="8833659630"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
     <!-- Image Showcase Section -->
     <div class="showcase">
         <h2>Hacker Dark Mode Calculator</h2>
@@ -771,7 +765,17 @@ body.light-mode .rom a:hover {
     <p>A complete implementation of a hacker-themed calculator with dark/light mode toggle, including all HTML, CSS, and JavaScript code.</p>
     
     <button id="hacker-toggle">Switch to Light Mode</button>
-<div class="ads html"></div>
+<div class="ads html">
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7867993252068161"
+     data-ad-slot="7788171279"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
     <!-- HTML Code Section -->
     <div class="code-section">
         <h2>HTML Structure</h2>
@@ -840,7 +844,17 @@ body.light-mode .rom a:hover {
 &lt;/body&gt;
 &lt;/html&gt;</code><button class="copy-btn" onclick="copyCode('html-code')">Copy</button></pre>
     </div>
-<div class="ads css"></div>
+<div class="ads css">
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7867993252068161"
+     data-ad-slot="7788171279"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
     <!-- CSS Code Section -->
     <div class="code-section">
         <h2>CSS Styling</h2>
@@ -1119,7 +1133,17 @@ body.light-mode .rom a:hover {
         height: 100%;
     }</code><button class="copy-btn" onclick="copyCode('css-code')">Copy</button></pre>
     </div>
-<div class="ads js"></div>
+<div class="ads js">
+    <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7867993252068161"
+     data-ad-slot="7788171279"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>
     <!-- JavaScript Code Section -->
     <div class="code-section">
         <h2>JavaScript Logic</h2>
@@ -1305,6 +1329,16 @@ body.light-mode .rom a:hover {
         <a href="https://roaring-starlight-0ec983.netlify.app">paly tha car game</a>
         <a href="https://neon-code-vault.netlify.app">other code</a>
     </div>
-    <div class="ads button"></div>
+    <div class="ads button">
+        <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-7867993252068161"
+     data-ad-slot="7788171279"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
 </body>
 </html>
